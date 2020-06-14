@@ -24,13 +24,13 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.PanelSuperior = New System.Windows.Forms.Panel()
-        Me.PanelMenu = New System.Windows.Forms.FlowLayoutPanel()
-        Me.PanelForm = New System.Windows.Forms.Panel()
         Me.btnRestaurar = New System.Windows.Forms.Button()
         Me.btnmaximizar = New System.Windows.Forms.Button()
         Me.btnMinimizar = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.PanelMenu = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnMenu = New System.Windows.Forms.PictureBox()
+        Me.PanelForm = New System.Windows.Forms.Panel()
         Me.TimerOcultarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.timerMostrarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.PanelSuperior.SuspendLayout()
@@ -51,25 +51,6 @@ Partial Class Form1
         Me.PanelSuperior.Size = New System.Drawing.Size(733, 49)
         Me.PanelSuperior.TabIndex = 0
         '
-        'PanelMenu
-        '
-        Me.PanelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.PanelMenu.Controls.Add(Me.btnMenu)
-        Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PanelMenu.Location = New System.Drawing.Point(0, 49)
-        Me.PanelMenu.Name = "PanelMenu"
-        Me.PanelMenu.Size = New System.Drawing.Size(176, 401)
-        Me.PanelMenu.TabIndex = 1
-        '
-        'PanelForm
-        '
-        Me.PanelForm.BackColor = System.Drawing.Color.Black
-        Me.PanelForm.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelForm.Location = New System.Drawing.Point(176, 49)
-        Me.PanelForm.Name = "PanelForm"
-        Me.PanelForm.Size = New System.Drawing.Size(557, 401)
-        Me.PanelForm.TabIndex = 2
-        '
         'btnRestaurar
         '
         Me.btnRestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -79,7 +60,7 @@ Partial Class Form1
         Me.btnRestaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.btnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRestaurar.Image = Global.Menu_personalizado.My.Resources.Resources.minimize_thewindow_theapplication_2872
-        Me.btnRestaurar.Location = New System.Drawing.Point(522, 0)
+        Me.btnRestaurar.Location = New System.Drawing.Point(635, 3)
         Me.btnRestaurar.Name = "btnRestaurar"
         Me.btnRestaurar.Size = New System.Drawing.Size(40, 40)
         Me.btnRestaurar.TabIndex = 3
@@ -131,6 +112,16 @@ Partial Class Form1
         Me.btnCerrar.TabIndex = 0
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
+        'PanelMenu
+        '
+        Me.PanelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.PanelMenu.Controls.Add(Me.btnMenu)
+        Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PanelMenu.Location = New System.Drawing.Point(0, 49)
+        Me.PanelMenu.Name = "PanelMenu"
+        Me.PanelMenu.Size = New System.Drawing.Size(210, 401)
+        Me.PanelMenu.TabIndex = 1
+        '
         'btnMenu
         '
         Me.btnMenu.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -144,7 +135,19 @@ Partial Class Form1
         Me.btnMenu.TabIndex = 1
         Me.btnMenu.TabStop = False
         '
+        'PanelForm
+        '
+        Me.PanelForm.BackColor = System.Drawing.Color.Black
+        Me.PanelForm.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelForm.Location = New System.Drawing.Point(210, 49)
+        Me.PanelForm.Name = "PanelForm"
+        Me.PanelForm.Size = New System.Drawing.Size(523, 401)
+        Me.PanelForm.TabIndex = 2
+        '
         'TimerOcultarMenu
+        '
+        '
+        'timerMostrarMenu
         '
         '
         'Form1
