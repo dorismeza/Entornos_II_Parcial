@@ -73,12 +73,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="formClase.Designer.vb">
-      <DependentUpon>formClase.vb</DependentUpon>
-    </Compile>
-    <Compile Include="formClase.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FormTareas.Designer.vb">
       <DependentUpon>FormTareas.vb</DependentUpon>
     </Compile>
@@ -91,11 +85,16 @@
     <Compile Include="frmArreglos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuTarea.vb">
+    <Compile Include="frmBolsaSolidaria.Designer.vb">
+      <DependentUpon>frmBolsaSolidaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBolsaSolidaria.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuTarea.Designer.vb">
-      <DependentUpon>MenuTarea.vb</DependentUpon>
+    <Compile Include="frmLibretaAhorro.Designer.vb">
+      <DependentUpon>frmLibretaAhorro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLibretaAhorro.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -116,17 +115,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="formClase.resx">
-      <DependentUpon>formClase.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormTareas.resx">
       <DependentUpon>FormTareas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmArreglos.resx">
       <DependentUpon>frmArreglos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuTarea.resx">
-      <DependentUpon>MenuTarea.vb</DependentUpon>
+    <EmbeddedResource Include="frmBolsaSolidaria.resx">
+      <DependentUpon>frmBolsaSolidaria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLibretaAhorro.resx">
+      <DependentUpon>frmLibretaAhorro.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

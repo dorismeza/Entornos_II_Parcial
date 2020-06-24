@@ -54,8 +54,6 @@
         txtPrecio.Enabled = False
         txtCantidad.Enabled = False
 
-
-
     End Sub
 
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click

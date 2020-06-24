@@ -48,9 +48,9 @@ Partial Class frmArreglos
         Me.txtMarca = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.txtCantVender = New System.Windows.Forms.MaskedTextBox()
         Me.btnVender = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtCantVender = New System.Windows.Forms.MaskedTextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -66,7 +66,7 @@ Partial Class frmArreglos
         Me.GroupBox1.Controls.Add(Me.btnGenCompu)
         Me.GroupBox1.Controls.Add(Me.cmbComputador)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(14, 24)
+        Me.GroupBox1.Location = New System.Drawing.Point(141, 98)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(363, 263)
         Me.GroupBox1.TabIndex = 0
@@ -122,7 +122,7 @@ Partial Class frmArreglos
         Me.GroupBox2.Controls.Add(Me.btnSolicitar)
         Me.GroupBox2.Controls.Add(Me.txtCantComp)
         Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Location = New System.Drawing.Point(14, 306)
+        Me.GroupBox2.Location = New System.Drawing.Point(141, 380)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(349, 188)
         Me.GroupBox2.TabIndex = 1
@@ -167,7 +167,7 @@ Partial Class frmArreglos
         Me.GroupBox3.Controls.Add(Me.txtCantidad2)
         Me.GroupBox3.Controls.Add(Me.btnRegistrar)
         Me.GroupBox3.Controls.Add(Me.Label2)
-        Me.GroupBox3.Location = New System.Drawing.Point(394, 32)
+        Me.GroupBox3.Location = New System.Drawing.Point(521, 106)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(349, 135)
         Me.GroupBox3.TabIndex = 2
@@ -212,7 +212,7 @@ Partial Class frmArreglos
         Me.GroupBox4.Controls.Add(Me.btnBuscar)
         Me.GroupBox4.Controls.Add(Me.txtMarca)
         Me.GroupBox4.Controls.Add(Me.Label3)
-        Me.GroupBox4.Location = New System.Drawing.Point(394, 196)
+        Me.GroupBox4.Location = New System.Drawing.Point(521, 270)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(349, 175)
         Me.GroupBox4.TabIndex = 3
@@ -297,12 +297,21 @@ Partial Class frmArreglos
         Me.GroupBox5.Controls.Add(Me.txtCantVender)
         Me.GroupBox5.Controls.Add(Me.btnVender)
         Me.GroupBox5.Controls.Add(Me.Label7)
-        Me.GroupBox5.Location = New System.Drawing.Point(394, 378)
+        Me.GroupBox5.Location = New System.Drawing.Point(521, 452)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(349, 135)
         Me.GroupBox5.TabIndex = 4
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Dinamico"
+        '
+        'txtCantVender
+        '
+        Me.txtCantVender.Location = New System.Drawing.Point(130, 43)
+        Me.txtCantVender.Mask = "99999"
+        Me.txtCantVender.Name = "txtCantVender"
+        Me.txtCantVender.Size = New System.Drawing.Size(100, 21)
+        Me.txtCantVender.TabIndex = 5
+        Me.txtCantVender.ValidatingType = GetType(Integer)
         '
         'btnVender
         '
@@ -322,21 +331,12 @@ Partial Class frmArreglos
         Me.Label7.TabIndex = 3
         Me.Label7.Text = "Cantidad a Vender"
         '
-        'txtCantVender
-        '
-        Me.txtCantVender.Location = New System.Drawing.Point(130, 43)
-        Me.txtCantVender.Mask = "99999"
-        Me.txtCantVender.Name = "txtCantVender"
-        Me.txtCantVender.Size = New System.Drawing.Size(100, 21)
-        Me.txtCantVender.TabIndex = 5
-        Me.txtCantVender.ValidatingType = GetType(Integer)
-        '
         'frmArreglos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(771, 545)
+        Me.ClientSize = New System.Drawing.Size(1064, 741)
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
@@ -345,6 +345,7 @@ Partial Class frmArreglos
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmArreglos"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Arreglos"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)

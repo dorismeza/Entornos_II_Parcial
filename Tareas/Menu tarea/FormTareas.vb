@@ -37,23 +37,6 @@ Public Class FormTareas
         Me.WindowState = FormWindowState.Maximized
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles PanelForm.Paint
-
-    End Sub
-
-    Private Sub btnInicio_Click(sender As Object, e As EventArgs) Handles btnInicio.Click
-        MenuTarea.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub BtnArreglos_Click(sender As Object, e As EventArgs) Handles BtnArreglos.Click
-        abrirFormulario(frmArreglos)
-
-    End Sub
     Private Sub abrirFormulario(ByVal formHijo As Object)
         If PanelForm.Controls.Count > 0 Then
             Me.PanelForm.Controls.RemoveAt(0)
@@ -66,5 +49,18 @@ Public Class FormTareas
         Left = (Me.Width - Width) / 2
         Top = (Me.Height - Height) / 2
         frm.Show()
+    End Sub
+
+
+    Private Sub BtnArreglos_Click(sender As Object, e As EventArgs) Handles BtnArreglos.Click
+        abrirFormulario(frmArreglos)
+    End Sub
+
+    Private Sub btnFunciones_Click(sender As Object, e As EventArgs) Handles btnFunciones.Click
+        abrirFormulario(frmLibretaAhorro)
+    End Sub
+
+    Private Sub btnBolsa_Click(sender As Object, e As EventArgs) Handles btnBolsa.Click
+        abrirFormulario(frmBolsaSolidaria)
     End Sub
 End Class
