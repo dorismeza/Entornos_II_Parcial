@@ -46,8 +46,6 @@ Public Class FormTareas
         frm.Dock = DockStyle.Fill
         Me.PanelForm.Controls.Add(frm)
         Me.PanelForm.Tag = frm
-        Left = (Me.Width - Width) / 2
-        Top = (Me.Height - Height) / 2
         frm.Show()
     End Sub
 
