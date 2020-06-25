@@ -1,5 +1,5 @@
 ﻿Imports System.Runtime.InteropServices
-Public Class FormTareas
+Public Class MenuTareas
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
     Private Shared Sub ReleaseCapture()
     End Sub
@@ -60,5 +60,26 @@ Public Class FormTareas
 
     Private Sub btnBolsa_Click(sender As Object, e As EventArgs) Handles btnBolsa.Click
         abrirFormulario(frmBolsaSolidaria)
+    End Sub
+
+
+    Private Sub btnMostrar_Click(sender As Object, e As EventArgs) Handles btnMostrar.Click
+        If PanelMenu.Width = 80 Then
+            While (PanelMenu.Width < 474)
+                Me.PanelMenu.Width = PanelMenu.Width + 20
+            End While
+            btnMostrar.Visible = False
+            btnEsconder.Visible = True
+        End If
+    End Sub
+
+    Private Sub btnEsconder_Click(sender As Object, e As EventArgs) Handles btnEsconder.Click
+        If PanelMenu.Width >= 380 Then
+            While (PanelMenu.Width > 80)
+                Me.PanelMenu.Width = PanelMenu.Width - 20
+            End While
+            btnMostrar.Visible = True
+            btnEsconder.Visible = False
+        End If
     End Sub
 End Class

@@ -73,10 +73,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormTareas.Designer.vb">
-      <DependentUpon>FormTareas.vb</DependentUpon>
+    <Compile Include="frmLibretaAhorroCompleta.Designer.vb">
+      <DependentUpon>frmLibretaAhorroCompleta.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormTareas.vb">
+    <Compile Include="frmLibretaAhorroCompleta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuTareas.Designer.vb">
+      <DependentUpon>MenuTareas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuTareas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmArreglos.Designer.vb">
@@ -115,8 +121,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FormTareas.resx">
-      <DependentUpon>FormTareas.vb</DependentUpon>
+    <EmbeddedResource Include="frmLibretaAhorroCompleta.resx">
+      <DependentUpon>frmLibretaAhorroCompleta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuTareas.resx">
+      <DependentUpon>MenuTareas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmArreglos.resx">
       <DependentUpon>frmArreglos.vb</DependentUpon>

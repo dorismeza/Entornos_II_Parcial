@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class FormTareas
+Partial Class MenuTareas
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,19 +22,21 @@ Partial Class FormTareas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormTareas))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuTareas))
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PanelSuperior = New System.Windows.Forms.Panel()
-        Me.PanelMenu = New System.Windows.Forms.Panel()
-        Me.PanelForm = New System.Windows.Forms.Panel()
-        Me.btnFunciones = New System.Windows.Forms.Button()
-        Me.BtnArreglos = New System.Windows.Forms.Button()
         Me.btnMaximizar = New System.Windows.Forms.Button()
         Me.btnRestaurar = New System.Windows.Forms.Button()
         Me.btnMinimizar = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.PanelMenu = New System.Windows.Forms.Panel()
+        Me.btnMostrar = New System.Windows.Forms.Button()
+        Me.btnEsconder = New System.Windows.Forms.Button()
         Me.btnBolsa = New System.Windows.Forms.Button()
+        Me.btnFunciones = New System.Windows.Forms.Button()
+        Me.BtnArreglos = New System.Windows.Forms.Button()
+        Me.PanelForm = New System.Windows.Forms.Panel()
         Me.Panel4.SuspendLayout()
         Me.PanelSuperior.SuspendLayout()
         Me.PanelMenu.SuspendLayout()
@@ -73,63 +75,6 @@ Partial Class FormTareas
         Me.PanelSuperior.Name = "PanelSuperior"
         Me.PanelSuperior.Size = New System.Drawing.Size(685, 40)
         Me.PanelSuperior.TabIndex = 5
-        '
-        'PanelMenu
-        '
-        Me.PanelMenu.BackColor = System.Drawing.Color.DimGray
-        Me.PanelMenu.Controls.Add(Me.btnBolsa)
-        Me.PanelMenu.Controls.Add(Me.btnFunciones)
-        Me.PanelMenu.Controls.Add(Me.BtnArreglos)
-        Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PanelMenu.Location = New System.Drawing.Point(0, 40)
-        Me.PanelMenu.Name = "PanelMenu"
-        Me.PanelMenu.Size = New System.Drawing.Size(137, 394)
-        Me.PanelMenu.TabIndex = 9
-        '
-        'PanelForm
-        '
-        Me.PanelForm.BackColor = System.Drawing.Color.White
-        Me.PanelForm.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelForm.Location = New System.Drawing.Point(137, 40)
-        Me.PanelForm.Name = "PanelForm"
-        Me.PanelForm.Size = New System.Drawing.Size(548, 394)
-        Me.PanelForm.TabIndex = 10
-        '
-        'btnFunciones
-        '
-        Me.btnFunciones.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnFunciones.BackColor = System.Drawing.Color.DimGray
-        Me.btnFunciones.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnFunciones.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnFunciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
-        Me.btnFunciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold
-        Me.btnFunciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFunciones.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnFunciones.Image = CType(resources.GetObject("btnFunciones.Image"), System.Drawing.Image)
-        Me.btnFunciones.Location = New System.Drawing.Point(38, 127)
-        Me.btnFunciones.Name = "btnFunciones"
-        Me.btnFunciones.Size = New System.Drawing.Size(100, 40)
-        Me.btnFunciones.TabIndex = 10
-        Me.btnFunciones.Text = "Funciones"
-        Me.btnFunciones.UseVisualStyleBackColor = False
-        '
-        'BtnArreglos
-        '
-        Me.BtnArreglos.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.BtnArreglos.BackColor = System.Drawing.Color.DimGray
-        Me.BtnArreglos.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnArreglos.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.BtnArreglos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
-        Me.BtnArreglos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold
-        Me.BtnArreglos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnArreglos.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnArreglos.Image = CType(resources.GetObject("BtnArreglos.Image"), System.Drawing.Image)
-        Me.BtnArreglos.Location = New System.Drawing.Point(38, 79)
-        Me.BtnArreglos.Name = "BtnArreglos"
-        Me.BtnArreglos.Size = New System.Drawing.Size(100, 40)
-        Me.BtnArreglos.TabIndex = 9
-        Me.BtnArreglos.Text = "Arreglos"
-        Me.BtnArreglos.UseVisualStyleBackColor = False
         '
         'btnMaximizar
         '
@@ -199,25 +144,127 @@ Partial Class FormTareas
         Me.btnCerrar.TabIndex = 0
         Me.btnCerrar.UseVisualStyleBackColor = False
         '
+        'PanelMenu
+        '
+        Me.PanelMenu.BackColor = System.Drawing.Color.DimGray
+        Me.PanelMenu.Controls.Add(Me.btnMostrar)
+        Me.PanelMenu.Controls.Add(Me.btnEsconder)
+        Me.PanelMenu.Controls.Add(Me.btnBolsa)
+        Me.PanelMenu.Controls.Add(Me.btnFunciones)
+        Me.PanelMenu.Controls.Add(Me.BtnArreglos)
+        Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PanelMenu.Location = New System.Drawing.Point(0, 40)
+        Me.PanelMenu.Name = "PanelMenu"
+        Me.PanelMenu.Size = New System.Drawing.Size(80, 394)
+        Me.PanelMenu.TabIndex = 9
+        '
+        'btnMostrar
+        '
+        Me.btnMostrar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMostrar.BackColor = System.Drawing.Color.Transparent
+        Me.btnMostrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMostrar.FlatAppearance.BorderSize = 0
+        Me.btnMostrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson
+        Me.btnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMostrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMostrar.Image = CType(resources.GetObject("btnMostrar.Image"), System.Drawing.Image)
+        Me.btnMostrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnMostrar.Location = New System.Drawing.Point(0, 169)
+        Me.btnMostrar.Name = "btnMostrar"
+        Me.btnMostrar.Size = New System.Drawing.Size(85, 40)
+        Me.btnMostrar.TabIndex = 14
+        Me.btnMostrar.Text = "Menu"
+        Me.btnMostrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnMostrar.UseVisualStyleBackColor = False
+        '
+        'btnEsconder
+        '
+        Me.btnEsconder.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnEsconder.BackColor = System.Drawing.Color.Transparent
+        Me.btnEsconder.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnEsconder.FlatAppearance.BorderSize = 0
+        Me.btnEsconder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson
+        Me.btnEsconder.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEsconder.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEsconder.Image = CType(resources.GetObject("btnEsconder.Image"), System.Drawing.Image)
+        Me.btnEsconder.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEsconder.Location = New System.Drawing.Point(0, 169)
+        Me.btnEsconder.Name = "btnEsconder"
+        Me.btnEsconder.Size = New System.Drawing.Size(85, 40)
+        Me.btnEsconder.TabIndex = 13
+        Me.btnEsconder.Text = "Menu"
+        Me.btnEsconder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEsconder.UseVisualStyleBackColor = False
+        '
         'btnBolsa
         '
-        Me.btnBolsa.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnBolsa.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnBolsa.BackColor = System.Drawing.Color.DimGray
         Me.btnBolsa.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnBolsa.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnBolsa.FlatAppearance.BorderSize = 0
         Me.btnBolsa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
         Me.btnBolsa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold
         Me.btnBolsa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBolsa.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBolsa.Image = CType(resources.GetObject("btnBolsa.Image"), System.Drawing.Image)
-        Me.btnBolsa.Location = New System.Drawing.Point(39, 175)
+        Me.btnBolsa.Location = New System.Drawing.Point(-296, 31)
         Me.btnBolsa.Name = "btnBolsa"
         Me.btnBolsa.Size = New System.Drawing.Size(100, 44)
         Me.btnBolsa.TabIndex = 11
         Me.btnBolsa.Text = "Bolsa Solidaria"
         Me.btnBolsa.UseVisualStyleBackColor = False
         '
-        'FormTareas
+        'btnFunciones
+        '
+        Me.btnFunciones.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnFunciones.BackColor = System.Drawing.Color.DimGray
+        Me.btnFunciones.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnFunciones.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnFunciones.FlatAppearance.BorderSize = 0
+        Me.btnFunciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.btnFunciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold
+        Me.btnFunciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFunciones.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFunciones.Image = CType(resources.GetObject("btnFunciones.Image"), System.Drawing.Image)
+        Me.btnFunciones.Location = New System.Drawing.Point(-190, 31)
+        Me.btnFunciones.Name = "btnFunciones"
+        Me.btnFunciones.Size = New System.Drawing.Size(100, 40)
+        Me.btnFunciones.TabIndex = 10
+        Me.btnFunciones.Text = "Funciones"
+        Me.btnFunciones.UseVisualStyleBackColor = False
+        '
+        'BtnArreglos
+        '
+        Me.BtnArreglos.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnArreglos.BackColor = System.Drawing.Color.DimGray
+        Me.BtnArreglos.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnArreglos.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BtnArreglos.FlatAppearance.BorderSize = 0
+        Me.BtnArreglos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.BtnArreglos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold
+        Me.BtnArreglos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnArreglos.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnArreglos.Image = CType(resources.GetObject("BtnArreglos.Image"), System.Drawing.Image)
+        Me.BtnArreglos.Location = New System.Drawing.Point(-402, 33)
+        Me.BtnArreglos.Name = "BtnArreglos"
+        Me.BtnArreglos.Size = New System.Drawing.Size(100, 40)
+        Me.BtnArreglos.TabIndex = 9
+        Me.BtnArreglos.Text = "Arreglos"
+        Me.BtnArreglos.UseVisualStyleBackColor = False
+        '
+        'PanelForm
+        '
+        Me.PanelForm.BackColor = System.Drawing.Color.White
+        Me.PanelForm.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelForm.Location = New System.Drawing.Point(80, 40)
+        Me.PanelForm.Name = "PanelForm"
+        Me.PanelForm.Size = New System.Drawing.Size(605, 394)
+        Me.PanelForm.TabIndex = 10
+        '
+        'MenuTareas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -227,7 +274,7 @@ Partial Class FormTareas
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.PanelSuperior)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "FormTareas"
+        Me.Name = "MenuTareas"
         Me.Text = "FormTareas"
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
@@ -249,4 +296,6 @@ Partial Class FormTareas
     Friend WithEvents PanelForm As Panel
     Friend WithEvents btnFunciones As Button
     Friend WithEvents btnBolsa As Button
+    Friend WithEvents btnEsconder As Button
+    Friend WithEvents btnMostrar As Button
 End Class

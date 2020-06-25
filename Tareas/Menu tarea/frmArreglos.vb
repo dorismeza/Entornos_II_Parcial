@@ -1,8 +1,13 @@
-﻿Public Class frmArreglos
+﻿Imports System.ComponentModel
+
+Public Class frmArreglos
     Private mComputadoras(,) As String
     Private cantComputadoras, stock As Integer
     Private index As Byte
     Private encuentra As Boolean = False
+    Dim marca As String
+
+
     Private Sub btnGenCompu_Click(sender As Object, e As EventArgs) Handles btnGenCompu.Click
         Dim computadoras(3) As String
         computadoras(0) = "Toshiba"
@@ -67,19 +72,20 @@
             mComputadoras(i, 3) = InputBox("Ingrese la cantidad N." & (i + 1), "Registro")
 
             index = i
-            mComputadoras(i, 3) += mComputadoras(i, 3)
+            stock += Val(mComputadoras(index, 3))
         Next
     End Sub
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         Dim marca As String
         marca = txtMarca.Text
-        marca = Asc(txtMarca.Text)
 
+        If txtMarca.Text = "" Then
+            MsgBox("Ingrese el dato a buscar", vbObjectError)
+        End If
         For i = 0 To (cantComputadoras - 1) Step 1
-            Asc(mComputadoras(i, 0))
-            If mComputadoras(i, 0) = marca Then
 
+            If (marca.ToLower = mComputadoras(i, 0).ToLowerInvariant) Then
                 txtModelo.Text = mComputadoras(i, 1)
                 txtPrecio.Text = mComputadoras(i, 2)
                 txtCantidad.Text = mComputadoras(i, 3)
@@ -87,7 +93,8 @@
                 encuentra = True
                 btnVender.Enabled = True
                 btnBuscar.Enabled = True
-
+            Else
+                MessageBox.Show("No existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
         Next
         If (encuentra = False) Then
@@ -99,7 +106,7 @@
         Dim cantVender As Integer
         cantVender = Val(txtCantVender.Text)
 
-        stock = mComputadoras(index, 3)
+
 
         If (cantVender > stock) Then
             MessageBox.Show("Sin stock", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -111,6 +118,57 @@
 
     End Sub
 
+    Private Sub txtMarca_Validating(sender As Object, e As CancelEventArgs) Handles txtMarca.Validating
+        If DirectCast(sender, TextBox).Text.Length > 0 Then
+            Me.ErrorProvider.SetError(sender, "")
+        Else
+            Me.ErrorProvider.SetError(sender, "Ingresa una marca")
+        End If
+    End Sub
 
+    Private Sub txtMarca_MouseHover(sender As Object, e As EventArgs) Handles txtMarca.MouseHover
+        ToolTip.SetToolTip(txtMarca, "Ingrese marca a buscar")
+        ToolTip.ToolTipTitle = "Marca"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
 
+    Private Sub txtCantidad2_Validating(sender As Object, e As CancelEventArgs) Handles txtCantidad2.Validating
+        If DirectCast(sender, MaskedTextBox).Text.Length > 0 Then
+            Me.ErrorProvider.SetError(sender, "")
+        Else
+            Me.ErrorProvider.SetError(sender, "Ingresa una cantidad")
+        End If
+    End Sub
+
+    Private Sub txtCantidad2_MouseHover(sender As Object, e As EventArgs) Handles txtCantidad2.MouseHover
+        ToolTip.SetToolTip(txtCantidad2, "Ingrese una cantidad")
+        ToolTip.ToolTipTitle = "Cantidad"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+    Private Sub txtCantComp_Validating(sender As Object, e As CancelEventArgs) Handles txtCantComp.Validating
+        If DirectCast(sender, TextBox).Text.Length > 0 Then
+            Me.ErrorProvider.SetError(sender, "")
+        Else
+            Me.ErrorProvider.SetError(sender, "Ingresa una cantidad")
+        End If
+    End Sub
+
+    Private Sub txtCantComp_MouseHover(sender As Object, e As EventArgs) Handles txtCantComp.MouseHover
+        ToolTip.SetToolTip(txtCantComp, "Ingrese una cantidad")
+        ToolTip.ToolTipTitle = "Cantidad"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+    Private Sub txtCantVender_Validating(sender As Object, e As CancelEventArgs) Handles txtCantVender.Validating
+        If DirectCast(sender, MaskedTextBox).Text.Length > 0 Then
+            Me.ErrorProvider.SetError(sender, "")
+        Else
+            Me.ErrorProvider.SetError(sender, "Ingresa una cantidad")
+        End If
+    End Sub
+
+    Private Sub txtCantVender_MouseHover(sender As Object, e As EventArgs) Handles txtCantVender.MouseHover
+        ToolTip.SetToolTip(txtCantVender, "Ingrese una cantidad")
+        ToolTip.ToolTipTitle = "Cantidad"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
 End Class

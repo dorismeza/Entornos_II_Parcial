@@ -22,6 +22,7 @@ Partial Class frmArreglos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.cmbPrecios = New System.Windows.Forms.ComboBox()
@@ -51,11 +52,14 @@ Partial Class frmArreglos
         Me.txtCantVender = New System.Windows.Forms.MaskedTextBox()
         Me.btnVender = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.ErrorProvider = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
+        CType(Me.ErrorProvider, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -331,12 +335,16 @@ Partial Class frmArreglos
         Me.Label7.TabIndex = 3
         Me.Label7.Text = "Cantidad a Vender"
         '
+        'ErrorProvider
+        '
+        Me.ErrorProvider.ContainerControl = Me
+        '
         'frmArreglos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1064, 741)
+        Me.ClientSize = New System.Drawing.Size(1064, 733)
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
@@ -356,6 +364,7 @@ Partial Class frmArreglos
         Me.GroupBox4.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
+        CType(Me.ErrorProvider, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -389,4 +398,6 @@ Partial Class frmArreglos
     Friend WithEvents Label7 As Label
     Friend WithEvents txtCantidad2 As MaskedTextBox
     Friend WithEvents txtCantVender As MaskedTextBox
+    Friend WithEvents ErrorProvider As ErrorProvider
+    Friend WithEvents ToolTip As ToolTip
 End Class

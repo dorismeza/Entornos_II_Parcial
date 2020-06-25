@@ -1,5 +1,7 @@
-﻿Public Class frmLibretaAhorro
+﻿
+Public Class frmLibretaAhorro
     Private monto As Integer
+
 
     Private Sub activarControles()
         txtUsuario.Enabled = False
