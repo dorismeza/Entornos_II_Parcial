@@ -22,7 +22,6 @@ Partial Class frmLibretaAhorroCompleta
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -34,34 +33,14 @@ Partial Class frmLibretaAhorroCompleta
         Me.btnRetirar = New System.Windows.Forms.Button()
         Me.btnDepositar = New System.Windows.Forms.Button()
         Me.btnAperturar = New System.Windows.Forms.Button()
-        Me.txtIdentidad = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.grpOperaciones = New System.Windows.Forms.GroupBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtIdOperaciones = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtPais = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtSaldo = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtCiudad = New System.Windows.Forms.TextBox()
-        Me.txtEdad = New System.Windows.Forms.MaskedTextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3.SuspendLayout()
         Me.grpOperaciones.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 53)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Nombre"
         '
         'GroupBox3
         '
@@ -158,28 +137,12 @@ Partial Class frmLibretaAhorroCompleta
         '
         'btnAperturar
         '
-        Me.btnAperturar.Location = New System.Drawing.Point(436, 19)
+        Me.btnAperturar.Location = New System.Drawing.Point(27, 37)
         Me.btnAperturar.Name = "btnAperturar"
         Me.btnAperturar.Size = New System.Drawing.Size(69, 63)
         Me.btnAperturar.TabIndex = 2
         Me.btnAperturar.Text = "Aperturar Cuenta"
         Me.btnAperturar.UseVisualStyleBackColor = True
-        '
-        'txtIdentidad
-        '
-        Me.txtIdentidad.Location = New System.Drawing.Point(63, 24)
-        Me.txtIdentidad.Name = "txtIdentidad"
-        Me.txtIdentidad.Size = New System.Drawing.Size(100, 20)
-        Me.txtIdentidad.TabIndex = 2
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 27)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(51, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Identidad"
         '
         'grpOperaciones
         '
@@ -193,28 +156,6 @@ Partial Class frmLibretaAhorroCompleta
         Me.grpOperaciones.TabIndex = 2
         Me.grpOperaciones.TabStop = False
         Me.grpOperaciones.Text = "Operaciones"
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.txtEdad)
-        Me.GroupBox1.Controls.Add(Me.txtCiudad)
-        Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Controls.Add(Me.txtPais)
-        Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.txtSaldo)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.btnAperturar)
-        Me.GroupBox1.Controls.Add(Me.txtNombre)
-        Me.GroupBox1.Controls.Add(Me.txtIdentidad)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(126, 6)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(511, 143)
-        Me.GroupBox1.TabIndex = 3
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Ingreso de Informacion"
         '
         'txtIdOperaciones
         '
@@ -232,78 +173,15 @@ Partial Class frmLibretaAhorroCompleta
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Identidad"
         '
-        'Label7
+        'GroupBox1
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(6, 80)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(32, 13)
-        Me.Label7.TabIndex = 4
-        Me.Label7.Text = "Edad"
-        '
-        'txtPais
-        '
-        Me.txtPais.Location = New System.Drawing.Point(246, 27)
-        Me.txtPais.Name = "txtPais"
-        Me.txtPais.Size = New System.Drawing.Size(102, 20)
-        Me.txtPais.TabIndex = 9
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(182, 27)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(27, 13)
-        Me.Label9.TabIndex = 8
-        Me.Label9.Text = "Pais"
-        '
-        'txtNombre
-        '
-        Me.txtNombre.Location = New System.Drawing.Point(63, 50)
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(100, 20)
-        Me.txtNombre.TabIndex = 3
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(182, 80)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(92, 13)
-        Me.Label8.TabIndex = 6
-        Me.Label8.Text = "Saldo de Apertura"
-        '
-        'txtSaldo
-        '
-        Me.txtSaldo.Location = New System.Drawing.Point(280, 79)
-        Me.txtSaldo.Name = "txtSaldo"
-        Me.txtSaldo.Size = New System.Drawing.Size(102, 20)
-        Me.txtSaldo.TabIndex = 7
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(182, 53)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(40, 13)
-        Me.Label10.TabIndex = 10
-        Me.Label10.Text = "Ciudad"
-        '
-        'txtCiudad
-        '
-        Me.txtCiudad.Location = New System.Drawing.Point(246, 53)
-        Me.txtCiudad.Name = "txtCiudad"
-        Me.txtCiudad.Size = New System.Drawing.Size(102, 20)
-        Me.txtCiudad.TabIndex = 11
-        '
-        'txtEdad
-        '
-        Me.txtEdad.Location = New System.Drawing.Point(63, 80)
-        Me.txtEdad.Mask = "999"
-        Me.txtEdad.Name = "txtEdad"
-        Me.txtEdad.Size = New System.Drawing.Size(47, 20)
-        Me.txtEdad.TabIndex = 12
-        Me.txtEdad.ValidatingType = GetType(Integer)
+        Me.GroupBox1.Controls.Add(Me.btnAperturar)
+        Me.GroupBox1.Location = New System.Drawing.Point(126, 6)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(129, 143)
+        Me.GroupBox1.TabIndex = 3
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Ingreso de Informacion"
         '
         'frmLibretaAhorroCompleta
         '
@@ -320,11 +198,9 @@ Partial Class frmLibretaAhorroCompleta
         Me.grpOperaciones.ResumeLayout(False)
         Me.grpOperaciones.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Label2 As Label
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
@@ -336,19 +212,8 @@ Partial Class frmLibretaAhorroCompleta
     Friend WithEvents btnRetirar As Button
     Friend WithEvents btnDepositar As Button
     Friend WithEvents btnAperturar As Button
-    Friend WithEvents txtIdentidad As TextBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents grpOperaciones As GroupBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents txtIdOperaciones As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents txtPais As TextBox
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents txtEdad As MaskedTextBox
-    Friend WithEvents txtCiudad As TextBox
-    Friend WithEvents Label10 As Label
-    Friend WithEvents txtSaldo As TextBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents txtNombre As TextBox
 End Class

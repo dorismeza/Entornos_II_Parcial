@@ -82,4 +82,8 @@ Public Class MenuTareas
             btnEsconder.Visible = False
         End If
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        abrirFormulario(frmLibretaAhorroCompleta)
+    End Sub
 End Class

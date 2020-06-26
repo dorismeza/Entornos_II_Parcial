@@ -1,29 +1,19 @@
 ﻿Public Class frmLibretaAhorroCompleta
-    Dim identidad As String
-    Dim nombre As String
-    Dim edad, i As Integer
-    Dim pais, ciudad As String
-    Dim saldo As String
     Dim cuenta(10, 5) As String
     Dim IdOperaciones As String
     Dim bandera As Boolean
+    Private monto, i As Integer
 
-    Private Sub frmLibretaAhorroCompleta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-    Private monto As Integer
 
     Private Sub activarControles()
-        txtIdentidad.Enabled = False
-        txtNombre.Enabled = False
+
         btnAperturar.Enabled = False
         btnRetirar.Enabled = True
         btnDepositar.Enabled = True
 
     End Sub
     Private Sub desactiveControles()
-        txtIdentidad.Enabled = True
-        txtNombre.Enabled = True
+
         btnAperturar.Enabled = True
         btnRetirar.Enabled = False
         btnDepositar.Enabled = False
@@ -31,9 +21,7 @@
     End Sub
     Private Sub limpiar()
         desactiveControles()
-        txtIdentidad.Clear()
         txtSaldoTotal.Clear()
-        txtNombre.Clear()
         listDepositos.Items.Clear()
         listRetiros.Items.Clear()
 
@@ -48,22 +36,19 @@
     End Sub
     Private Sub btnAperturar_Click(sender As Object, e As EventArgs) Handles btnAperturar.Click
         Dim cliente As String
+        Dim i As Integer
         ReDim Preserve cuenta(10, 5)
-        identidad = txtIdentidad.Text
-        edad = Val(txtEdad.Text)
-        nombre = txtNombre.Text
-        pais = txtPais.Text
-        ciudad = txtNombre.Text
-        saldo = Val(txtSaldo.Text)
 
 
-        cuenta(i, 0) = identidad
-        cuenta(i, 1) = nombre
-        cuenta(i, 2) = edad
-        cuenta(i, 3) = pais
-        cuenta(i, 4) = ciudad
-        cuenta(i, 5) = saldo
 
+        cuenta(i, 0) = InputBox("Ingrese identidad", "Apertura de cuenta")
+        cuenta(i, 1) = InputBox("Ingrese Nombre", "Apertura de cuenta")
+        cuenta(i, 2) = InputBox("Ingrese la edad", "Apertura de cuenta")
+        cuenta(i, 3) = InputBox("Ingrese Pais", "Apertura de cuenta")
+        cuenta(i, 4) = InputBox("Ingrese Ciudad", "Apertura de cuenta")
+        cuenta(i, 5) = InputBox("Ingrese el saldo de apertura", "Apertura de cuenta")
+        i += 1
+        monto = Val(cuenta(i, 5))
         btnRetirar.Enabled = True
         btnDepositar.Enabled = True
         'If (monto > 0) Then
@@ -71,10 +56,9 @@
         'Else
         'MessageBox.Show("Monto mayor a 0", "Ingresar monto correcto", MessageBoxButtons.OK, MessageBoxIcon.Error)
         'End If
-        i += 1
     End Sub
     Private Function HacerOperacion()
-        IdOperaciones = txtIdOperaciones.Text
+
         For c = 0 To i Step 1
             If IdOperaciones = cuenta(c, 0) Then
                 bandera = True
@@ -87,7 +71,7 @@
 
     Private Function leer(mensaje As String)
         Dim cantidad As Double
-        cantidad = InputBox("Ingrese un monto a " & mensaje, "Operacion")
+        cantidad = Val(InputBox("Ingrese un monto a " & mensaje, "Operacion"))
         mostrarSaldo()
         Return cantidad
     End Function
@@ -99,33 +83,37 @@
 
     Private Sub btnDepositar_Click(sender As Object, e As EventArgs) Handles btnDepositar.Click
         Dim deposito As Double
-        For c = 0 To i Step 1
+        IdOperaciones = txtIdOperaciones.Text
+        For c = 0 To 10 Step 1
             If IdOperaciones = cuenta(c, 0) Then
                 deposito = leer("Depositar")
-                saldo += deposito
+                monto += deposito
                 listDepositos.Items.Add(deposito)
                 mostrarSaldo()
+            Else
+                MsgBox("Debe aperturar una cuenta", vbObjectError)
             End If
         Next
-        MsgBox("Debe aperturar una cuenta", vbObjectError)
+
     End Sub
 
     Private Sub btnRetirar_Click(sender As Object, e As EventArgs) Handles btnRetirar.Click
         Dim retiro As Double
+
         For c = 0 To i Step 1
             If IdOperaciones = cuenta(c, 0) Then
 
                 retiro = leer("Retirar")
-                    If (retiro > saldo) Then
-                        MessageBox.Show("Saldo insuficiente", "Deposite mas", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Else
-                    saldo -= retiro
-                    listRetiros.Items.Add(retiro)
-                        mostrarSaldo()
-                    End If
+                If (retiro > monto) Then
+                    MessageBox.Show("Saldo insuficiente", "Deposite mas", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Else
-                    MsgBox("Debe aperturar una cuenta", vbObjectError)
+                    monto -= retiro
+                    listRetiros.Items.Add(retiro)
+                    mostrarSaldo()
                 End If
-         Next
+            Else
+                MsgBox("Debe aperturar una cuenta", vbObjectError)
+            End If
+        Next
     End Sub
 End Class
