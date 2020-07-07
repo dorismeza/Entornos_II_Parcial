@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmLibretaAhorroCompleta
+Partial Class frmLibretaAhorroTarea
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,6 +22,7 @@ Partial Class frmLibretaAhorroCompleta
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -37,9 +38,12 @@ Partial Class frmLibretaAhorroCompleta
         Me.txtIdOperaciones = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox3.SuspendLayout()
         Me.grpOperaciones.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox3
@@ -183,21 +187,30 @@ Partial Class frmLibretaAhorroCompleta
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Ingreso de Informacion"
         '
-        'frmLibretaAhorroCompleta
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
+        'frmLibretaAhorroTarea
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(719, 450)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(719, 453)
+        Me.ControlBox = False
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.grpOperaciones)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "frmLibretaAhorroCompleta"
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Name = "frmLibretaAhorroTarea"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmLibretaAhorroCompleta"
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.grpOperaciones.ResumeLayout(False)
         Me.grpOperaciones.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -216,4 +229,6 @@ Partial Class frmLibretaAhorroCompleta
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents txtIdOperaciones As TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

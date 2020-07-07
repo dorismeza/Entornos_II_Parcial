@@ -1,4 +1,6 @@
-﻿Public Class frmLibretaAhorroCompleta
+﻿Imports System.ComponentModel
+
+Public Class frmLibretaAhorroTarea
     Dim cuenta(10, 5) As String
     Dim IdOperaciones As String
     Dim bandera As Boolean
@@ -39,8 +41,6 @@
         Dim i As Integer
         ReDim Preserve cuenta(10, 5)
 
-
-
         cuenta(i, 0) = InputBox("Ingrese identidad", "Apertura de cuenta")
         cuenta(i, 1) = InputBox("Ingrese Nombre", "Apertura de cuenta")
         cuenta(i, 2) = InputBox("Ingrese la edad", "Apertura de cuenta")
@@ -58,6 +58,7 @@
         'End If
     End Sub
     Private Function HacerOperacion()
+        txtIdOperaciones.Text = IdOperaciones
 
         For c = 0 To i Step 1
             If IdOperaciones = cuenta(c, 0) Then
@@ -90,7 +91,7 @@
                 monto += deposito
                 listDepositos.Items.Add(deposito)
                 mostrarSaldo()
-            Else
+            ElseIf c = 10 Then
                 MsgBox("Debe aperturar una cuenta", vbObjectError)
             End If
         Next
@@ -115,5 +116,24 @@
                 MsgBox("Debe aperturar una cuenta", vbObjectError)
             End If
         Next
+    End Sub
+
+
+    Private Sub txtIdOperaciones_TextChanged(sender As Object, e As EventArgs) Handles txtIdOperaciones.TextChanged
+
+    End Sub
+
+    Private Sub txtIdOperaciones_MouseHover(sender As Object, e As EventArgs) Handles txtIdOperaciones.MouseHover
+        ToolTip1.SetToolTip(txtIdOperaciones, "Ingrese una Identidad")
+        ToolTip1.ToolTipTitle = "Identidad"
+        ToolTip1.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub txtIdOperaciones_Validating(sender As Object, e As CancelEventArgs) Handles txtIdOperaciones.Validating
+        If Val(txtIdOperaciones.Text) - Int(Val(txtIdOperaciones.Text)) = 0 Then
+            Me.ErrorProvider1.SetError(sender, "")
+        Else
+            Me.ErrorProvider1.SetError(sender, "Ingrese una identidad")
+        End If
     End Sub
 End Class
