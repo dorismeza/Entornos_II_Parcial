@@ -22,9 +22,12 @@ Partial Class frmLibretaAhorro
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnAperturar = New System.Windows.Forms.Button()
+        Me.txtMonto = New System.Windows.Forms.TextBox()
         Me.txtUsuario = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnRetirar = New System.Windows.Forms.Button()
@@ -37,11 +40,12 @@ Partial Class frmLibretaAhorro
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.listRetiros = New System.Windows.Forms.ListBox()
         Me.listDepositos = New System.Windows.Forms.ListBox()
-        Me.txtMonto = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -51,7 +55,7 @@ Partial Class frmLibretaAhorro
         Me.GroupBox1.Controls.Add(Me.txtUsuario)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 23)
+        Me.GroupBox1.Location = New System.Drawing.Point(223, 76)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(407, 111)
         Me.GroupBox1.TabIndex = 0
@@ -67,12 +71,28 @@ Partial Class frmLibretaAhorro
         Me.btnAperturar.Text = "Aperturar Cuenta"
         Me.btnAperturar.UseVisualStyleBackColor = True
         '
+        'txtMonto
+        '
+        Me.txtMonto.Location = New System.Drawing.Point(106, 60)
+        Me.txtMonto.Name = "txtMonto"
+        Me.txtMonto.Size = New System.Drawing.Size(102, 20)
+        Me.txtMonto.TabIndex = 3
+        '
         'txtUsuario
         '
         Me.txtUsuario.Location = New System.Drawing.Point(108, 24)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(100, 20)
         Me.txtUsuario.TabIndex = 2
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(6, 63)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(37, 13)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Monto"
         '
         'Label1
         '
@@ -87,7 +107,7 @@ Partial Class frmLibretaAhorro
         '
         Me.GroupBox2.Controls.Add(Me.btnRetirar)
         Me.GroupBox2.Controls.Add(Me.btnDepositar)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 172)
+        Me.GroupBox2.Location = New System.Drawing.Point(223, 225)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(407, 87)
         Me.GroupBox2.TabIndex = 0
@@ -121,7 +141,7 @@ Partial Class frmLibretaAhorro
         Me.GroupBox3.Controls.Add(Me.btnLimpiar)
         Me.GroupBox3.Controls.Add(Me.listRetiros)
         Me.GroupBox3.Controls.Add(Me.listDepositos)
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 286)
+        Me.GroupBox3.Location = New System.Drawing.Point(223, 339)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(407, 176)
         Me.GroupBox3.TabIndex = 1
@@ -187,28 +207,16 @@ Partial Class frmLibretaAhorro
         Me.listDepositos.Size = New System.Drawing.Size(120, 121)
         Me.listDepositos.TabIndex = 5
         '
-        'txtMonto
+        'ErrorProvider1
         '
-        Me.txtMonto.Location = New System.Drawing.Point(106, 60)
-        Me.txtMonto.Name = "txtMonto"
-        Me.txtMonto.Size = New System.Drawing.Size(102, 20)
-        Me.txtMonto.TabIndex = 3
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 63)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(37, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Monto"
+        Me.ErrorProvider1.ContainerControl = Me
         '
         'frmLibretaAhorro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(432, 477)
+        Me.ClientSize = New System.Drawing.Size(750, 574)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -221,6 +229,7 @@ Partial Class frmLibretaAhorro
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -242,4 +251,6 @@ Partial Class frmLibretaAhorro
     Friend WithEvents listDepositos As ListBox
     Friend WithEvents txtMonto As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

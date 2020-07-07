@@ -1,4 +1,6 @@
 ﻿
+Imports System.ComponentModel
+
 Public Class frmLibretaAhorro
     Private monto As Integer
 
@@ -40,13 +42,17 @@ Public Class frmLibretaAhorro
         Dim cliente As String
         cliente = txtUsuario.Text
         monto = Val(txtMonto.Text)
-
-        If (monto > 0) Then
-            activarControles()
+        If IsNumeric(txtUsuario.Text) Then
+            MsgBox("Ingrese un nombre correcto")
+        ElseIf Not IsNumeric(txtMonto.Text) Then
+            MsgBox("Ingrese un nombre correcto")
         Else
-            MessageBox.Show("Monto mayor a 0", "Ingresar monto correcto", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            If (monto > 0) Then
+                activarControles()
+            Else
+                MessageBox.Show("Monto mayor a 0", "Ingresar monto correcto", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
         End If
-
     End Sub
     Private Function leer(mensaje As String)
         Dim cantidad As Double
@@ -78,6 +84,34 @@ Public Class frmLibretaAhorro
             listRetiros.Items.Add(retiro)
             mostrarSaldo()
 
+        End If
+    End Sub
+
+    Private Sub txtUsuario_MouseHover(sender As Object, e As EventArgs) Handles txtUsuario.MouseHover
+        ToolTip1.SetToolTip(txtUsuario, "Ingrese un nombre")
+        ToolTip1.ToolTipTitle = "Nombre usuario"
+        ToolTip1.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub txtMonto_Validating(sender As Object, e As CancelEventArgs) Handles txtMonto.Validating
+        If Val(txtMonto.Text) - Int(Val(txtMonto.Text)) = 0 Then
+            Me.ErrorProvider1.SetError(sender, "")
+        Else
+            Me.ErrorProvider1.SetError(sender, "Ingrese un monto")
+        End If
+    End Sub
+
+    Private Sub txtMonto_MouseHover(sender As Object, e As EventArgs) Handles txtMonto.MouseHover
+        ToolTip1.SetToolTip(txtMonto, "Ingrese un monto")
+        ToolTip1.ToolTipTitle = "Monto"
+        ToolTip1.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub txtUsuario_Validating(sender As Object, e As CancelEventArgs) Handles txtUsuario.Validating
+        If Val(txtUsuario.Text) - Int(Val(txtUsuario.Text)) = 0 Then
+            Me.ErrorProvider1.SetError(sender, "")
+        Else
+            Me.ErrorProvider1.SetError(sender, "Ingrese un nombre")
         End If
     End Sub
 End Class
