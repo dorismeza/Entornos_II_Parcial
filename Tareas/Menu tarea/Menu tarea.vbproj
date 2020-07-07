@@ -76,6 +76,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="conexion.vb" />
+    <Compile Include="frmCrud.Designer.vb">
+      <DependentUpon>frmCrud.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrud.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLibretaAhorroTarea.Designer.vb">
       <DependentUpon>frmLibretaAhorroTarea.vb</DependentUpon>
     </Compile>
@@ -124,6 +131,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmCrud.resx">
+      <DependentUpon>frmCrud.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLibretaAhorroTarea.resx">
       <DependentUpon>frmLibretaAhorroTarea.vb</DependentUpon>
     </EmbeddedResource>

@@ -55,7 +55,7 @@ Partial Class frmLibretaAhorroTarea
         Me.GroupBox3.Controls.Add(Me.btnLimpiar)
         Me.GroupBox3.Controls.Add(Me.listRetiros)
         Me.GroupBox3.Controls.Add(Me.listDepositos)
-        Me.GroupBox3.Location = New System.Drawing.Point(126, 269)
+        Me.GroupBox3.Location = New System.Drawing.Point(137, 401)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(511, 176)
         Me.GroupBox3.TabIndex = 4
@@ -123,7 +123,7 @@ Partial Class frmLibretaAhorroTarea
         '
         'btnRetirar
         '
-        Me.btnRetirar.Location = New System.Drawing.Point(366, 29)
+        Me.btnRetirar.Location = New System.Drawing.Point(371, 19)
         Me.btnRetirar.Name = "btnRetirar"
         Me.btnRetirar.Size = New System.Drawing.Size(81, 42)
         Me.btnRetirar.TabIndex = 4
@@ -132,7 +132,7 @@ Partial Class frmLibretaAhorroTarea
         '
         'btnDepositar
         '
-        Me.btnDepositar.Location = New System.Drawing.Point(246, 29)
+        Me.btnDepositar.Location = New System.Drawing.Point(251, 19)
         Me.btnDepositar.Name = "btnDepositar"
         Me.btnDepositar.Size = New System.Drawing.Size(80, 42)
         Me.btnDepositar.TabIndex = 3
@@ -141,7 +141,7 @@ Partial Class frmLibretaAhorroTarea
         '
         'btnAperturar
         '
-        Me.btnAperturar.Location = New System.Drawing.Point(27, 37)
+        Me.btnAperturar.Location = New System.Drawing.Point(27, 39)
         Me.btnAperturar.Name = "btnAperturar"
         Me.btnAperturar.Size = New System.Drawing.Size(69, 63)
         Me.btnAperturar.TabIndex = 2
@@ -154,7 +154,7 @@ Partial Class frmLibretaAhorroTarea
         Me.grpOperaciones.Controls.Add(Me.Label6)
         Me.grpOperaciones.Controls.Add(Me.btnRetirar)
         Me.grpOperaciones.Controls.Add(Me.btnDepositar)
-        Me.grpOperaciones.Location = New System.Drawing.Point(126, 155)
+        Me.grpOperaciones.Location = New System.Drawing.Point(137, 287)
         Me.grpOperaciones.Name = "grpOperaciones"
         Me.grpOperaciones.Size = New System.Drawing.Size(511, 87)
         Me.grpOperaciones.TabIndex = 2
@@ -163,7 +163,7 @@ Partial Class frmLibretaAhorroTarea
         '
         'txtIdOperaciones
         '
-        Me.txtIdOperaciones.Location = New System.Drawing.Point(72, 41)
+        Me.txtIdOperaciones.Location = New System.Drawing.Point(77, 31)
         Me.txtIdOperaciones.Name = "txtIdOperaciones"
         Me.txtIdOperaciones.Size = New System.Drawing.Size(100, 20)
         Me.txtIdOperaciones.TabIndex = 6
@@ -171,7 +171,7 @@ Partial Class frmLibretaAhorroTarea
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(15, 44)
+        Me.Label6.Location = New System.Drawing.Point(20, 34)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(51, 13)
         Me.Label6.TabIndex = 5
@@ -180,7 +180,7 @@ Partial Class frmLibretaAhorroTarea
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.btnAperturar)
-        Me.GroupBox1.Location = New System.Drawing.Point(126, 6)
+        Me.GroupBox1.Location = New System.Drawing.Point(137, 138)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(129, 143)
         Me.GroupBox1.TabIndex = 3
@@ -196,7 +196,7 @@ Partial Class frmLibretaAhorroTarea
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(719, 453)
+        Me.ClientSize = New System.Drawing.Size(719, 592)
         Me.ControlBox = False
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.grpOperaciones)
